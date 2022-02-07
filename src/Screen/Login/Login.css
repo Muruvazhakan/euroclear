@@ -1,0 +1,22 @@
+.form-styles{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
+}
+.checkbox-style{
+    margin-right: 2%;
+}
+.btn-styles{
+    margin-top: 3%;
+}
