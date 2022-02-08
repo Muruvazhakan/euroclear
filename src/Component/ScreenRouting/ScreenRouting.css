@@ -1,9 +1,10 @@
 
   .outer {
     display: flex;
+    
     justify-content: center;
     flex-direction: column;
-    text-align: left;
+    /* text-align: left; */
   }
   
   .inner {
@@ -14,6 +15,7 @@
     padding: 40px 55px 45px 55px;
     border-radius: 15px;
     transition: all .3s;
+    
   }
   
   .outer .form-control:focus {
