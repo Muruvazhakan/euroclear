@@ -6,28 +6,28 @@ function Register() {
             <h3>Register</h3>
 
             <div className="form-group form-styles">
-                <label>First name</label>
+                <label className="lable-styles">First name</label>
                 <input type="text" className="form-control" placeholder="First name" />
             </div>
 
             <div className="form-group form-styles">
-                <label>Last name</label>
+                <label className="lable-styles">Last name</label>
                 <input type="text" className="form-control" placeholder="Last name" />
             </div>
 
             <div className="form-group form-styles">
-                <label>Email</label>
+                <label className="lable-styles">Email</label>
                 <input type="email" className="form-control" placeholder="Enter email" />
             </div>
 
             <div className="form-group form-styles">
-                <label>Password</label>
+                <label className="lable-styles">Password</label>
                 <input type="password" className="form-control" placeholder="Enter password" />
             </div>
 
             <button type="submit" className="btn btn-outline-secondary  btn-styles">Register</button>
             <p className="forgot-password text-right">
-                Already registered <a href="#">log in?</a>
+                Already registered <a href="/Login">log in?</a>
             </p>
         </form>
     </>;

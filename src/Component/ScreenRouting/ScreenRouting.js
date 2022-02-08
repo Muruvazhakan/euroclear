@@ -4,11 +4,11 @@ import Home from '../../Screen/Home/Home';
 
 import Login from "../../Screen/Login/Login";
 import Register from "../../Screen/Register/Register";
-import Navbar from './Navbar/Navbar';
+import Navbars from './Navbar/Navbar';
 import './ScreenRouting.css';
 function ScreenRouting(props) {
     return <>
-        <Navbar />     
+        <Navbars />     
         <div className="outer">
             <div className="inner">
                 <Routes>
