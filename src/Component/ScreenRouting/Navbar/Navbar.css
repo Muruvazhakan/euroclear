@@ -1,6 +1,7 @@
 .navbar-light {
     background-color: #ffffff;
     box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    color: red;
   }
   .navbar-style{
     margin-left: 1%;
@@ -9,3 +10,54 @@
     padding-right: 2%;    
     justify-content: end;
   }
+  .logo-style{
+    font-weight: 350;
+    line-height: 32px;
+    font-size: 34px;
+    letter-spacing: -0.2px;
+    -ms-flex-item-align: end;
+    
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin: 0 12px 0 20%;
+    display: inline-block;
+    align-self: flex-start;    
+    padding-bottom: 10px;   
+    margin-top: 10%;
+  }
+  .header_logo {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80px;
+    flex: 0 0 80px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+    margin-top: -20%;
+    margin-left: 40%;
+    
+}
+.navbar-light .navbar-brand {
+  color: red;
+}
+.euroclear-button{
+  /* background: #c33; */
+  display: inline-block;
+  border-radius: 5px;
+  /* padding: 6px 15px; */
+  font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  -webkit-appearance: none;
+  border: 1px solid #c33;
+  -webkit-transition: background .3s ease, border-color .3s ease;
+  -o-transition: background .3s ease, border-color .3s ease;
+  transition: background .3s ease, border-color .3s ease;
+}

@@ -2,11 +2,19 @@ import React from 'react';
 import './Register.css';
 import Jump from 'react-reveal/Jump';
 import { FaUserPlus } from 'react-icons/fa';
+import { Button } from 'react-bootstrap';
+import Card from '../../Component/Card/Card';
 function Register() {
+    React.useEffect(() => { 
+        document.title="Create User - Euroclear"
+    },[]);
     return <>
         <Jump>
-            <form>
+            <form className='rigter-screen'>
                 {/* <h3>Register</h3> */}
+                <Card className="header-text-style Register" >        
+                Register
+                </Card>  
                 <FaUserPlus size={"50px"} className="user-icon-styles" />
                 <div className="form-group form-styles">
                     {/* <label className="lable-styles">First name</label> */}
@@ -29,9 +37,11 @@ function Register() {
                 </div>
 
                 <button type="submit" className="btn btn-outline-secondary  btn-styles">Register</button>
-                <p className="forgot-password text-right">
-                    Already registered <a href="/Login">log in?</a>
-                </p>
+               
+                <div className="form-group form-styles">
+                <p className="register-styles">Already registered..</p>
+                <Button href="/Login" variant='outline-info'> login in? </Button>
+                </div>
             </form>
         </Jump>
     </>;

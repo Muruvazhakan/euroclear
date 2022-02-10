@@ -7,20 +7,20 @@ import './Navbar.css';
 import euroLogo from '../../../Assets/img/eurologo.jpg';
 function Navbars() {
     return <>
-        <Navbar className="navbar navbar-light bg-light " bg="light" sticky='top' expand='lg' >
+        <Navbar sticky='top' expand='lg' >
             <Container fluid >
                 <Navbar.Brand href='./' className="navbar-style">
                     <img
-                        alt="EuroClear"
+                        alt="Euroclear"
                         src={euroLogo}
                         width="50"
                         height="50"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top header_logo"
                     />{' '}
                     
                 </Navbar.Brand>
-                <Navbar.Brand href='./'>
-                <h2 style={{color:"red"}}>EuroClear </h2>
+                <Navbar.Brand  href='./'>
+                <h2 className='logo-style' style={{color:'red'}}>Euroclear Finland</h2>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-aria-controls='navbarScroll' />
                 <Navbar.Collapse id="navbarScroll">
@@ -30,8 +30,11 @@ function Navbars() {
                         navbarScroll
                     >
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/Login">Login</Nav.Link>
-                        <Nav.Link href="/Register">Register</Nav.Link>
+                        <div className="euroclear-button" >
+                        <Nav.Link href="/Login">MyEuroclear</Nav.Link>
+                        {/* <Button className="euroclear-button" href="/Login">MyEuroClear</Button>  */}
+                        </div>
+                        {/* <Nav.Link href="/Register">Register</Nav.Link> */}
 
 
                     </Nav>

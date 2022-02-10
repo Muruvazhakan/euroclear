@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
+import ForgotPassword from '../../Screen/ForgotPassword/ForgotPassword';
 import Histroy from '../../Screen/Histroy/Histroy';
 import Home from '../../Screen/Home/Home';
 
@@ -9,16 +10,17 @@ import Register from "../../Screen/Register/Register";
 import Navbars from './Navbar/Navbar';
 import './ScreenRouting.css';
 function ScreenRouting(props) {
-    return <>
-        <div className="outer">
+    return <>    
+        <div className="outer ">
             <Navbars />
             <div className="inner">
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route  path='/' element={<Home />} />
                     <Route path="/Login" element={<Login />} />
                     <Route path="/Register" element={<Register />} />
                     <Route path="/Histroy" element={<Histroy />} />
-                    <Route path="/Search" element={<MainQuery />} />
+                    <Route path="/Search" element={<MainQuery />} />                    
+                    <Route  path="/ForgotPassword" element={<ForgotPassword />} />
                 </Routes>
             </div>
         </div>
