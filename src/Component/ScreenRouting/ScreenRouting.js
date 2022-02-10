@@ -9,11 +9,20 @@ import MainQuery from '../../Screen/MainQuery/MainQuery';
 import Register from "../../Screen/Register/Register";
 import Navbars from './Navbar/Navbar';
 import './ScreenRouting.css';
+
+import querybg from '../../Assets/img/bg1.jpg';
 function ScreenRouting(props) {
     return <>    
-        <div className="outer ">
+        <div >
             <Navbars />
-            <div className="inner">
+            <img 
+                    src={querybg}
+                     alt="Euroclear"                        
+                     width="100%"
+                     height="350px"
+                     className=" " />
+            <div>
+                 
                 <Routes>
                     <Route  path='/' element={<Home />} />
                     <Route path="/Login" element={<Login />} />

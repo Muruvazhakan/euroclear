@@ -1,5 +1,4 @@
 .group-align{
-
     flex-direction: row;
     display: flex;
     align-items: baseline;
@@ -8,12 +7,83 @@
     gap: 20px;
     row-gap: 10px;
     margin: 10px;
-
 }
 .single-align{
     padding-left: 2%;
     /* margin: 1%; */
+    
+
 }
 .text-spacing-style{
     white-space:nowrap;
+}
+.card-group-styles{
+    margin: 2%;
+    padding: 1%;
+    margin-left: 0;
+}
+.img-style{
+    height: 550px;
+    width: 1550px;
+    min-width: 500px;
+    min-height: 250px;
+    margin-top: -250px;
+    border-radius: 25px;
+}
+.btn {
+    width: 200px;
+    max-width: 100%;
+}
+.date-style{
+    margin-left: 30px;
+    margin-right: 9%;
+}
+.button-submit{
+    margin-right: 4%;
+}
+.text-spacing-style{
+    margin-right: 2%;
+}
+.card-styles-main{
+    margin: 2%;
+    margin-bottom: 2%;
+    padding-bottom: 3%;
+}
+.simple-style{
+    margin-left: -1%;
+}
+.title-styles{    
+    justify-content: left;
+    display: flex;
+    margin-left: 2%;
+    /* margin-top: 5%; */
+    padding-top: 1%;
+    color: red;
+    font-weight: 700;
+}
+.date-style-main{
+    justify-content: left;
+    display: flex;
+    padding-top: 3%;
+    margin-left: 35px;
+}
+.Container-styles-main{
+    margin-bottom: 2%;
+}
+.simple-style1{
+    margin-right: 25%;
+}
+.title-Statistics{
+    position: absolute;
+    margin-top: -10%;
+    color: white;
+    margin-left: 5%;    
+    color: #fff;
+    font-weight: 700;
+    font-size: 48px;
+    text-shadow: 1px 1px 0 rgb(0 0 0 / 50%);
+}
+.text-box-style{
+    height: 10px;
+    margin-left: 40%;
 }
