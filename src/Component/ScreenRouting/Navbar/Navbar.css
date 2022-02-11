@@ -61,3 +61,14 @@
   -o-transition: background .3s ease, border-color .3s ease;
   transition: background .3s ease, border-color .3s ease;
 }
+.login-style{
+  font-size: 18px;
+  margin-top: 5%;
+  color: rgba(0, 0, 0, 0.7);
+  margin-right: 10px;
+}
+.logout-bt{
+  width: 80px;
+  height: 40px;
+  margin-top: 3%;
+}

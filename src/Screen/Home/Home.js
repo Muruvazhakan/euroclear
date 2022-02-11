@@ -5,7 +5,7 @@ export const Home = (props) => {
   return(
       <>
   <div>
-      Home page
+     
     <MainQuery />
   </div>
   </>
