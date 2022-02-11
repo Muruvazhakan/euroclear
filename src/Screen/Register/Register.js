@@ -4,15 +4,24 @@ import Jump from 'react-reveal/Jump';
 import { FaUserPlus } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 import Card from '../../Component/Card/Card';
+import querybg from '../../Assets/img/bg2.jpg';
 function Register() {
     React.useEffect(() => { 
         document.title="Create User - Euroclear"
     },[]);
     return <>
+    <img
+            src={querybg}
+            alt="Euroclear"
+            width="100%"
+            height="350px"
+            className=" title-img" />
         <Jump>
+        <div className="header-text-style" >
+            <div className='inner'>
             <form className='rigter-screen'>
                 {/* <h3>Register</h3> */}
-                <Card className="header-text-style Register" >        
+                <Card className="header-text-style Register login-style" >        
                 Register
                 </Card>  
                 <FaUserPlus size={"50px"} className="user-icon-styles" />
@@ -43,6 +52,8 @@ function Register() {
                 <Button href="/Login" variant='outline-info'> login in? </Button>
                 </div>
             </form>
+            </div>
+            </div>
         </Jump>
     </>;
 }

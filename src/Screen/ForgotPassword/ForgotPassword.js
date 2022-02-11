@@ -5,6 +5,8 @@ import { RiUserSearchFill } from 'react-icons/ri';
 import { Button, Col, Row } from 'react-bootstrap';
 import Card from '../../Component/Card/Card';
 import recaptcha from '../../Assets/img/recaptcha.jpg';
+import querybg from '../../Assets/img/bg2.jpg';
+import Zoom from 'react-reveal/Zoom';
 function ForgotPassword() {
 
     
@@ -25,10 +27,20 @@ function ForgotPassword() {
         });
     }
     return <>
-        <Jump>
+        <img
+            src={querybg}
+            alt="Euroclear"
+            width="100%"
+            height="350px"
+            className=" title-img" />
+            <Jump>
+        <div className="header-text-style" >
+            
+            <div className='inner'>
+            
             <form className='rigter-screen'> 
                  
-                <Card className="header-text-style Register" >        
+                <Card className="header-text-style Register login-style" >        
                 Forgot Password
                 </Card>  
                 <RiUserSearchFill size={"50px"} className="user-icon-styles" />            
@@ -54,14 +66,21 @@ function ForgotPassword() {
                 <button className="btn btn-outline-secondary  btn-styles" onClick={()=>handleSubmit()}>Submit</button>
                 </>  
                   :
-                <div >
+                < >
+                
+                <Zoom >
                 <p className="register-styles">A link to rest your password has been sent to your registered email !</p>
                 <Button href="/Login" variant='outline-info'> Resend </Button>
-                </div>
+                </Zoom>
+                </>
                
             }
             </form>
-        </Jump>
+            
+            </div>
+            </div>
+            </Jump>
+        
     </>;
 }
 

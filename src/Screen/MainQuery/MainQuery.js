@@ -7,6 +7,8 @@ import axios from 'axios';
 import PieCharts from '../../Component/Chart/PieCharts';
 import * as UrlDatas from '../../Assets/Datas/Datas';
 import querybg from '../../Assets/img/bg1.jpg';
+import Tada from 'react-reveal/Tada';
+import Flash from 'react-reveal/Flash';
 // import DatePicker, { ReactDatePicker } from "react-datepicker";
 import DatePicker from 'react-datepicker';
 const cors = require('cors');
@@ -14,13 +16,13 @@ require('checkboxes');
 function MainQuery() {
 
     const datas = {
-        statisticson: ["Number of Shareholders", "% of Shareholders", "Ownership","Market Value", "Settlement","Dividends"],         
+        statisticson: ["Number of Shareholders", "% of Shareholders", "Ownership", "Market Value", "Settlement", "Dividends"],
         account: ["Book entry account", "Equity savings account"],
-        viewby: ["Age of the Investor", "Sector of the Investor", "Issuing Company"],      
+        viewby: ["Age of the Investor", "Sector of the Investor", "Issuing Company"],
         gender: ["Male", "Female"],
-        age: ["<17y", "18-25y", "26-45y","46-65y",">65y"],
-        sector: ["Households", "Finance and insurance companies","Public entities","Non-profit communities","Foreign countries"],      
-        column: ["Account Type", "Gender", "Issuer (Finnish Vs Non-Finnish)"],
+        age: ["<17y", "18-25y", "26-45y", "46-65y", ">65y"],
+        sector: ["Households", "Finance and insurance companies", "Public entities", "Non-profit communities", "Foreign countries"],
+        column: ["Account Type", "Gender", "Issuer(Finnish Vs Non-Fin)"],
     }
 
 
@@ -38,6 +40,8 @@ function MainQuery() {
         todate: new Date(),
         analysis: "",
         column: "",
+        ismessage: false,
+        message:null,
     };
     const [selecteddata, setSelecteddata] = React.useState(initialdata);
 
@@ -54,7 +58,7 @@ function MainQuery() {
             axios.get('https://jsonplaceholder.typicode.com/posts').then(r => setData(r.data))
         }
         fetchData();
-        document.title = "Login - Euroclear";
+        document.title = "Statistics for Journalists - Euroclear";
         handleQuerySelect();
     }, [])
 
@@ -177,17 +181,45 @@ function MainQuery() {
     const handleColumnSelect = (val) => {
         setSelecteddata({
             ...selecteddata,
-            todate: val
+            column: val
         })
     }
-
+    
+    const handleMessageSelect = () => {
+        setSelecteddata({
+            ...selecteddata,
+            ismessage: !selecteddata.ismessage
+        })
+    }
     const [date, setDate] = useState(new Date());
-
+    const handleMessageSend = (val) =>{
+        
+    }
+    const handleReset = () => {
+        setSelecteddata("")
+    }
+    const handleHistory = () => {
+        
+    }
+    const handleSubmit = () => {
+        
+    }
+    
+							
+							
     return <>
         {/* <Card> */}
 
         {/* <ExportToExcel apiData={data} fileName={fileName} /> */}
+        
+        <img
+            src={querybg}
+            alt="Euroclear"
+            width="100%"
+            height="350px"
+            className=" title-img" />
         <div className='title-Statistics'>Statistics for Journalists</div>
+        <Flash>
         <Container fluid className="Container-styles-main" >
             <Card className="card-styles-main">
                 <form >
@@ -260,7 +292,7 @@ function MainQuery() {
 
                     <Row xl={6}>
 
-                    <Col xl={3}>
+                        <Col xl={3}>
                             <FormGroup >
                                 <div className='group-align'>
                                     <div className='text-spacing-style'>
@@ -339,34 +371,42 @@ function MainQuery() {
                             </FormGroup>
                         </Col>
 
-                        
+
 
                     </Row>
                     <div className='date-style-main' > Date From
                         <input id="dateRequired" type="date" dateFormat="dd-mm-yyyy" className='date-style' name="dateRequired" onClick={handleFromDateSelect} />
-                      
+
                         To
                         <input id="dateRequired" type="date" className='date-style' name="dateRequired" onClick={handleToSelect} />
                     </div>
                 </form>
 
-                <Button variant='dark' className='forgot-pass button-submit'  size="lg"> Submit</Button>
-                <Button variant='dark' className='forgot-pass button-submit'  size="lg"> Reset</Button>
-                <Button variant='dark' className='forgot-pass'   size="lg"> My History</Button>
+                <Button variant='dark' className='forgot-pass button-submit' onClick={handleSubmit} size="lg"> Submit</Button>
+                <Button variant='dark'  className='forgot-pass button-submit' size="lg" onClick={handleReset}> Reset</Button>
+                <Button variant='dark' href="/History" className='forgot-pass' size="lg" onClick={handleHistory}> My History</Button>
                 <Row>
-                    <div className='group-align'>                     
-                    Can't find what you're looking for? Click here to send a message
-                    <input className='checkbox-style' type="checkbox" />
-                    
-                    </div> 
-                   
+                    <div className='group-align'>
+                        Can't find what you're looking for? Click here to send a message
+                        <input className='checkbox-style' type="checkbox" onClick={handleMessageSelect} />
+
+                    </div>
+
                 </Row>
-                <input className='text-box-style group-align' type="text"/>
-                <Button variant='dark' className='forgot-pass'   size="lg"> Send</Button>
+                {selecteddata.ismessage ?
+                    <>
+                    <Tada >
+                        <input className='text-box-style group-align' type="text" />
+                        <Button variant='dark' className='forgot-pass' size="lg" onClick={handleMessageSend}> Send</Button>
+                        </Tada>
+                    </>
+                    : null
+                }
+
             </Card>
 
         </Container>
-
+        </Flash>
         {/* <ExportToExcel /> */}
         {/* </Card> */}
     </>;
